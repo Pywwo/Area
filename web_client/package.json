@@ -1,0 +1,71 @@
+{
+  "name": "web_client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.8.3",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "history": "^4.10.1",
+    "install": "^0.13.0",
+    "jest": "^24.8.0",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.15",
+    "node-modules": "^1.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-color": "^2.18.0",
+    "react-dom": "^16.12.0",
+    "react-notification-system": "^0.3.0",
+    "react-notification-system-redux": "^2.0.0",
+    "react-notifications": "^1.4.3",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^4.4.0-beta.6",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "3.3.0",
+    "react-select": "^3.0.4",
+    "react-sizeme": "^2.6.12",
+    "react-stack-grid": "^0.7.1",
+    "react-swipeable-views": "^0.13.9",
+    "redux": "^4.0.5",
+    "redux-effects-universal-cookie": "^1.0.1",
+    "redux-multi": "^0.1.12",
+    "redux-notifications": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "resize-sensor--react": "^1.0.2",
+    "styled-components": "^5.0.1",
+    "universal-cookie": "^4.0.3",
+    "use-history": "^1.4.1",
+    "use-state-with-callback": "^1.0.18",
+    "vanilla-picker": "^2.10.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoresponsive-react": "^1.1.31"
+  }
+}

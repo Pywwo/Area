@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WallActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="92dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/arlrdbd"
+        android:text="@string/app_name"
+        android:textColor="#314DE1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginBar"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/loginBar"
+        android:layout_width="428dp"
+        android:layout_height="52dp"
+        android:background="@layout/image_border"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/rectangle_shape"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-10dp"
+        tools:layout_editor_absoluteY="-11dp" />
+
+    <ImageView
+        android:id="@+id/bottombar"
+        android:layout_width="415dp"
+        android:layout_height="56dp"
+
+        android:layout_marginTop="112dp"
+        android:background="@layout/image_border"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/rectangle_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/loginBar"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/homebutton"
+        android:layout_width="52dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/internetbleu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottombar"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottombar" />
+
+    <ImageView
+        android:id="@+id/actions_button"
+        android:layout_width="52dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/thunder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottombar"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottombar" />
+
+    <ImageView
+        android:id="@+id/param_button"
+        android:layout_width="52dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/gear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottombar"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottombar" />
+
+    <ImageView
+        android:id="@+id/logout_button"
+        android:layout_width="52dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottombar"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottombar"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_wall_list"
+        android:layout_width="409dp"
+        android:layout_height="531dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottombar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

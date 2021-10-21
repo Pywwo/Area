@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arlrdbd"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216" />
+
+    <ImageView
+        android:id="@+id/loginBar"
+        android:layout_width="361dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/BarColorLight"
+        android:src="@drawable/rectangle_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.164" />
+
+    <ImageView
+        android:id="@+id/passwordBar"
+        android:layout_width="361dp"
+        android:layout_height="50dp"
+        android:background="@color/BarColorLight"
+        android:src="@drawable/rectangle_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/loginBar"
+        app:layout_constraintVertical_bias="0.164" />
+
+    <ImageView
+        android:id="@+id/imageUser"
+        android:layout_width="51dp"
+        android:layout_height="32dp"
+        android:src="@drawable/user"
+        app:layout_constraintBottom_toBottomOf="@+id/loginBar"
+        app:layout_constraintEnd_toStartOf="@+id/login"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="@+id/loginBar"
+        app:layout_constraintTop_toTopOf="@+id/loginBar"
+        app:layout_constraintVertical_bias="0.416" />
+
+    <ImageView
+        android:id="@+id/imagePass"
+        android:layout_width="51dp"
+        android:layout_height="32dp"
+        android:src="@drawable/locker"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordBar"
+        app:layout_constraintEnd_toStartOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="@+id/passwordBar"
+        app:layout_constraintTop_toTopOf="@+id/passwordBar" />
+
+    <TextView
+        android:id="@+id/passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/calibri"
+        android:text="Password"
+        android:textColor="@color/textColorLight"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordBar"
+        app:layout_constraintEnd_toEndOf="@+id/passwordBar"
+        app:layout_constraintStart_toStartOf="@+id/passwordBar"
+        app:layout_constraintTop_toTopOf="@+id/passwordBar" />
+
+    <EditText
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="@font/calibri"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/textColorLight"
+        android:textColorHighlight="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
+        android:textColorLink="@android:color/background_dark"
+        android:textCursorDrawable="@android:drawable/edit_text"
+        app:layout_constraintBottom_toBottomOf="@+id/loginBar"
+        app:layout_constraintEnd_toEndOf="@+id/loginBar"
+        app:layout_constraintTop_toTopOf="@+id/loginBar"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="@font/calibri"
+        android:inputType="textPassword"
+        android:textAlignment="textStart"
+        android:textColor="@color/textColorLight"
+        android:textColorHighlight="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
+        android:textColorLink="@android:color/background_dark"
+        android:textCursorDrawable="@android:drawable/edit_text"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordBar"
+        app:layout_constraintEnd_toEndOf="@+id/passwordBar"
+        app:layout_constraintTop_toTopOf="@+id/passwordBar"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/calibri"
+        android:text="Username"
+        android:textColor="@color/textColorLight"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginBar"
+        app:layout_constraintEnd_toEndOf="@+id/loginBar"
+        app:layout_constraintStart_toStartOf="@+id/loginBar"
+        app:layout_constraintTop_toTopOf="@+id/loginBar"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="161dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/background_light"
+        android:text="@string/get_app"
+        android:textColor="@color/MainBackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordBar" />
+
+    <Button
+        android:id="@+id/create_account_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="@font/arlrdbd"
+        android:text="@string/account"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/loginBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

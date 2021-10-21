@@ -1,0 +1,305 @@
+{
+    "client": {
+        "host":  "10.101.53.35"
+    },
+    "server": {
+        "current_time": 1531680780,
+        "services": [{
+            "name": "outlook",
+            "description": "service outlook",
+            "logo": "outlook.png",
+            "color": "#4695da",
+            "oauth": "true",
+            "link_oauth": "/outlook/login",
+            "actions": [{
+                "name": "receive_a_mail_from_X",
+                "description": "Trigger when the user receive a mail from a specific mail address.",
+                "params": [
+                    {"name": "address", "default": "area51@gmail.com", "type": "text"}
+                ],
+                "outputs": [
+                    {"name": "sender_name", "type": "text"},
+                    {"name": "sender_mail", "type": "text"},
+                    {"name": "object", "type": "text"},
+                    {"name": "content", "type": "text"}
+                ],
+                "webhook": true
+            }, {
+                "name": "receive_a_mail",
+                "description": "Trigger when the user receive any mail.",
+                "params": [],
+                "outputs": [
+                    {"name": "sender_name", "type": "text"},
+                    {"name": "sender_mail", "type": "text"},
+                    {"name": "object", "type": "text"},
+                    {"name": "content", "type": "text"}
+                ],
+                "webhook": true
+            }],
+            "reactions": [{
+                "name": "send_mail",
+                "description": "Send a custom mail to someone.",
+                "params": [
+                    {"name": "receiver", "default": "area@area.com", "type": "text"},
+                    {"name": "object", "default": "", "type": "text"},
+                    {"name": "content", "default": "", "type": "area"}
+                ]
+            }]
+        }, {
+            "name": "youtube",
+            "description": "service youtube",
+            "logo": "youtube.png",
+            "color": "#E83939",
+            "oauth": "true",
+            "link_oauth": "/youtube/login",
+            "actions": [{
+                "name": "update_on_subbed_channel",
+                "description": "Trigger when a new video is upload from a subscribed channel.",
+                "params": [
+                    {"name": "channelId", "default": "UCMh2T7QLsogq16VG3DnpTkw", "type": "text"}
+                ],
+                "outputs": [
+                    {"name": "channel", "type": "text"},
+                    {"name": "title", "type": "text"},
+                    {"name": "url", "type": "text"}
+                ],
+                "webhook": true
+            }],
+            "reactions": [{
+                "name": "like_a_video",
+                "description": "Like a youtube video",
+                "params": [
+                    {"name": "url", "default": "https://www.youtube.com/watch?v=Ligs-ygFlRk", "type": "text"}
+                ]
+            }, {
+                "name": "dislike_a_video",
+                "description": "Dislike a youtube video",
+                "params": [
+                    {"name": "url", "default": "https://www.youtube.com/watch?v=Ligs-ygFlRk", "type": "text"}
+                ]
+            }, {
+                "name": "unrate_a_video",
+                "description": "Unrate a youtube video",
+                "params": [
+                    {"name": "url", "default": "https://www.youtube.com/watch?v=Ligs-ygFlRk", "type": "text"}
+                ]
+            }]
+        }, {
+            "name": "riot",
+            "description": "service riot for league of legends",
+            "logo": "riot.png",
+            "color": "#1e272e",
+            "oauth": "false",
+            "actions": [{
+                "name": "new_game_with_requested_kills",
+                "description": "Trigger when the player end a game with a minimum of kills",
+                "params": [
+                    {"name": "kills", "default": 10, "type": "number"},
+                    {"name": "summoner_name", "type": "text"}
+                ],
+                "outputs": [
+                    {"name": "kills_asked", "type": "number"},
+                    {"name": "win_loss", "type": "text"},
+                    {"name": "kills", "type": "text"},
+                    {"name": "deaths", "type": "text"},
+                    {"name": "assists", "type": "text"}
+                ],
+                "webhook": false
+            },
+            {
+                "name": "new_game_with_requested_multi_kills",
+                "description": "Trigger when the player end a game with a minimum multikill",
+                "params": [
+                    {"name": "multi_kill", "default": 1, "type": "number"},
+                    {"name": "summoner_name", "type": "text"}
+                ],
+                "outputs": [
+                    {"name": "multi_kill_asked", "type": "text"},
+                    {"name": "win_loss", "type": "text"},
+                    {"name": "kills", "type": "text"},
+                    {"name": "deaths", "type": "text"},
+                    {"name": "assists", "type": "text"}
+                ],
+                "webhook": false
+            }],
+            "reactions": []
+        }, {
+            "name": "github",
+            "description": "service github",
+            "logo": "github.png",
+            "color": "#1b1f23",
+            "oauth": "true",
+            "link_oauth": "/github/login",
+            "actions": [{
+                "name": "new_push_on_repo",
+                "description": "Trigger when a new commit has been pushed on a Github repository.",
+                "params": [
+                    {"name": "repo_owner", "default": "", "type": "text"},
+                    {"name": "repo_name", "default": "", "type": "text"}
+                ],
+                "outputs": [
+                    {"name": "repo_owner", "type": "text"},
+                    {"name": "repo_name", "type": "text"},
+                    {"name": "pusher", "type": "text"},
+                    {"name": "commit_message", "type": "text"},
+                    {"name": "timestamp", "type": "text"}
+                ],
+                "webhook": true
+            }],
+            "reactions": [{
+                "name": "comment_on_issue",
+                "description": "Comment a custom message on a certain issue",
+                "params": [
+                    {"name": "repo_owner", "default": "", "type": "text"},
+                    {"name": "repo_name", "default": "", "type": "text"},
+                    {"name": "issue_number", "default": "", "type": "text"},
+                    {"name": "comment", "default": "", "type": "area"}
+                ]
+            }, {
+                "name": "comment_on_pull_request",
+                "description": "Comment a custom message on a merge_request",
+                "params": [
+                    {"name": "repo_owner", "default": "", "type": "text"},
+                    {"name": "repo_name", "default": "", "type": "text"},
+                    {"name": "pull_number", "default": "", "type": "text"},
+                    {"name": "comment", "default": "", "type": "area"}
+                ]
+            }]
+        }, {
+            "name": "time",
+            "description": "service time",
+            "logo": "time.png",
+            "color": "#d2dae2",
+            "oauth": "false",
+            "actions": [{
+                "name": "it_is_X_am",
+                "description": "Trigger every day at X am",
+                "params": [
+                    {"name": "hour", "default": 15, "type": "hour"},
+                    {"name": "min", "default": 45, "type": "min"}
+                ],
+                "outputs": [
+                    {"name": "day", "type": "day"},
+                    {"name": "hour", "type": "hour"},
+                    {"name": "min", "type": "min"}
+                ],
+                "webhook": false
+            }, {
+                "name": "one_day_per_week",
+                "description": "Trigger each week at a certain time",
+                "params": [
+                    {"name": "day", "default": "Monday", "type": "day"},
+                    {"name": "hour", "default": 15, "type": "hour"},
+                    {"name": "min", "default": 45, "type": "min"}
+                ],
+                "outputs": [
+                    {"name": "week", "type": "week"},
+                    {"name": "day", "type": "day"},
+                    {"name": "hour", "type": "hour"},
+                    {"name": "min", "type": "min"}
+                ],
+                "webhook": false
+            }, {
+                "name": "every_X_hour",
+                "description": "Trigger at a specific time interval",
+                "params": [
+                    {"name": "hour", "default": 0, "type": "hour"},
+                    {"name": "min", "default": 30, "type": "min"}
+                ],
+                "outputs": [
+                    {"name": "hour", "type": "hour"},
+                    {"name": "min", "type": "min"}
+                ],
+                "webhook": false
+            }],
+            "reactions": []
+        }, {
+            "name": "dropbox",
+            "description": "service dropbox",
+            "logo": "dropbox.png",
+            "color": "#85AAF9",
+            "oauth": "true",
+            "link_oauth": "/dropbox/login",
+            "actions": [{
+                "name": "file_uploaded",
+                "description": "Trigger when a file is uploaded",
+                "params": [
+                    {"name": "folder", "default": "", "type": "text"},
+                    {"name": "recursive", "default": "false", "type": "boolean"}
+                ],
+                "outputs": [
+                    {"name": "folder", "type": "text"},
+                    {"name": "file_name", "type": "text"},
+                    {"name": "size", "type": "text"},
+                    {"name": "date", "type": "text"}
+                ],
+                "webhook": true
+            }, {
+                "name": "file_or_folder_deleted",
+                "description": "Trigger when a file is deleted",
+                "params": [
+                    {"name": "folder", "default": "", "type": "text"},
+                    {"name": "recursive", "default": "false", "type": "boolean"}
+                ],
+                "outputs": [
+                    {"name": "folder", "type": "text"},
+                    {"name": "name", "type": "text"}
+                ],
+                "webhook": true
+            }, {
+                "name": "folder_uploaded",
+                "description": "Trigger when a folder is deleted",
+                "params": [
+                    {"name": "folder", "default": "", "type": "text"},
+                    {"name": "recursive", "default": "false", "type": "boolean"}
+                ],
+                "outputs": [
+                    {"name": "folder", "type": "text"},
+                    {"name": "folder_name", "type": "text"}
+                ],
+                "webhook": true
+            }],
+            "reactions": [{
+                "name": "delete_file",
+                "description": "Delete a file from a repo",
+                "params": [
+                    {"name": "repo_name", "default": "/", "type": "text"},
+                    {"name": "file_name", "default": "text.txt", "type": "text"}
+                ]
+            }, {
+                "name": "duplicate_file",
+                "description": "Duplicate a file from a repo",
+                "params": [
+                    {"name": "repo_name", "default": "/repo/", "type": "text"},
+                    {"name": "file_name", "default": "test.txt", "type": "text"},
+                    {"name": "new_repo", "default": "/other_repo/", "type": "text"},
+                    {"name": "new_file", "default": "test_copy.txt", "type": "text"}
+                ]
+            }]
+        }, {
+            "name": "area",
+            "description": "service area",
+            "logo": "area.png",
+            "color": "#6E75A7",
+            "oauth": "false",
+            "actions": [],
+            "reactions": [{
+                "name": "display",
+                "description": "Display notification on the area after a trigger of an action",
+                "params": [
+                    {"name": "color", "default": "#95CA9E", "type": "color"},
+                    {"name": "title", "default": "", "type": "text"},
+                    {"name": "content", "default": "", "type": "area"}
+                ]
+            }, {
+                "name": "area_send_mail",
+                "description": "Send a custom mail to someone. through area.",
+                "params": [
+                    {"name": "receiver", "default": "", "type": "text"},
+                    {"name": "object", "default": "AREA", "type": "text"},
+                    {"name": "content", "default": "Have a good day!", "type": "area"}
+                ]
+            }]
+        }]
+    }
+}

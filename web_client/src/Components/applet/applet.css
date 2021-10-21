@@ -1,0 +1,36 @@
+.image-hover-opacity:hover {
+    filter: blur(3px);
+    transition: .3s all;
+}
+
+.overlay {
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+    opacity: 0;
+}
+.overlay h2 {
+    padding-top: 20%;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.overlay p {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.overlay:hover {
+    opacity: 1;
+    transition: .3s all;
+}
+
+.myContainer:hover .image-hover-opacity {
+    filter: blur(3px);
+    transition: .3s all;
+}

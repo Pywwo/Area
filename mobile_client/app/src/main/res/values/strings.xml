@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AREA</string>
+    <string name="account">Create Account</string>
+    <string name="Login">Login to app</string>
+    <string name="get_app">Get to app</string>
+    <string name="todo">TODO</string>
+    <string name="actions">Actions</string>
+    <string name="services">Services</string>
+    <string name="applets">Applets</string>
+    <string name="next">Next</string>
+    <string name="action">Action</string>
+</resources>

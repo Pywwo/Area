@@ -1,0 +1,29 @@
+
+.Authentification {
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+
+@font-face {
+    font-family: titleFont;
+    src: url("../../Assets/Fonts/Arial rounded MT bold.ttf");
+}
+
+@font-face {
+    font-family: textFont;
+    src: url("../../Assets/Fonts/Calibri Regular.ttf");
+}
+
+*{
+    font-family: textFont;
+    font-size: 1em;
+}
+
+#area-logo {
+    color: white;
+    font-family: titleFont !important;
+}
+
+.authCard {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}

@@ -1,0 +1,12 @@
+let status = {
+    NO_ERROR: 200,
+    ERROR: 500,
+    INVALID_TOKEN: 501,
+    INVALID_ACTION: 502,
+    INVALID_REACTION: 503,
+    INVALID_EMAIL: 505,
+    INVALID_USER: 506,
+    INVALID_PASSWORD: 507
+};
+
+module.exports = status;

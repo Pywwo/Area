@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#315FE1</color>
+    <color name="colorPrimaryDark">#3172E1</color>
+    <color name="colorAccent">#3172E1</color>-->
+    <color name="MainBackgroundColor">#5B90E3</color>
+    <color name="ButtonLoginColor">#98B3F0</color>
+    <color name="textColorLight">#D5DFF9</color>
+    <color name="BarColorLight">#98B1F0</color>
+    <color name="testYoutube">#5e7ffe</color>
+</resources>
